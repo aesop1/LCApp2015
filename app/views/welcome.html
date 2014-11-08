@@ -1,0 +1,13 @@
+<div ng-controller="WelcomeCtrl">
+<div ng-include="navUrl"></div>  
+
+    <div class="container">       
+        <div class="error">{{errorMsg}}</div>
+
+        <div ng-bind-html="trustHTML(welcome)"></div>
+
+        
+
+     </div>
+
+</div>

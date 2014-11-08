@@ -1,0 +1,61 @@
+<div ng-controller="AgendaDay1Ctrl">
+<div ng-include="navUrl"></div>
+
+    <div class="container content lclist cf">        
+    
+        <div class="error">{{errorMsg}}</div>
+       
+          <!-- get loading class referenced below -->
+         <div class="loading" ng-show="!sessions">
+              Loading ...
+         </div>
+      
+      
+          <div class="row" ng-repeat="session in sessions">
+            
+            <div class="col-xs-12">
+
+              <div class="row">          
+            
+                <div class="col-xs-7">
+                  <h4 style="line-height:22px;text-transform: uppercase;">{{session.SessionTitle}}</h4>
+                  <br>
+
+                  <!-- span class="room">{{session.SessionRoom}}</span -->
+                  <!-- span class="ical" ng-bind-html="trustHTML(session.SessionICal)"></span -->
+                 
+                </div>
+
+                <div class="col-xs-5">
+                    <p style="font-size: 11px;margin-top:10px;"><img src="/images/icons/general-session-icon.svg" alt="Session Category" style="width:25px;height:auto;">&nbsp;&nbsp; {{session.SessionCategory}}</p><br>
+                </div>
+
+              </div><!-- end first data row -->
+              <div class="row">
+
+                <div class="col-xs-7">
+                  <br>
+                  <p style="vertical-align: bottom;">{{session.SessionStart}} - {{session.SessionEnd}}<br>
+                    Room: {{session.SessionRoom}}
+                  </p>
+                </div>
+
+
+                <div class="col-xs-5">
+                    <p>&nbsp;</p>
+                    <p style="vertical-align: bottom;"><a class="session-detail" href="#/agenda/{{session.Day}}/{{session.ID}}"><img src="/images/agenda-details-btn.svg" alt="Agenda Details" class="agenda-details-btn"></a></p>                   
+                </div>
+
+            </div> <!-- end second data row -->
+            <div class="row">
+              
+              <div class="col-xs-12 col-centered"><hr></div>
+
+            </div> <!-- end rule line row -->
+     
+
+          </div> <!-- end 12 col -->
+       
+    </div><!-- end ng-repeat row -->
+</div><!-- end container -->
+</div><!-- end controller -->

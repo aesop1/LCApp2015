@@ -1,0 +1,188 @@
+<div ng-controller="SurveyCtrl">
+<div ng-include="navUrl"></div>  
+
+    <div class="content survey cf">       
+        <div class="error">{{errorMsg}}</div>
+
+        <h2>Feedback</h2>
+        <p>Please leave any general feedback about the conference via the form below. </p>
+        <p>Each answer is required for submission.</p>
+
+          <form name="surveyform" id="surveyform" class="form" method="post" role="form">
+
+
+          <div class="form-group">
+               <legend>1. Overall, how satisfied were you with the speakers/presenters?</legend>
+                    <div class="radio">
+                         <input type="radio" name="speakers" id="speakers-very-satisfied" class="speakers" value="very satisfied">
+                         <label for="speakers-very">Very Satisfied</label>
+                    </div>
+                    <div class="radio">                   
+                         <input type="radio" name="speakers" id="speakers-satisfied" class="speakers" value="satisfied">
+                         <label for="speakers-satisfied">Satisfied</label>
+                    </div>
+                    <div class="radio">                    
+                         <input type="radio" name="speakers" id="speakers-dissatisfied" class="speakers" value="dissatisfied">
+                         <label for="speakers-dissatisfied">Dissatisfied</label>
+                    </div>
+                    <div class="radio">                    
+                         <input type="radio" name="speakers" id="speakers-very-dissatisfied" class="speakers" value="very dissatisfied">
+                         <label for="speakers-very-dissatisfied">Very Dissatisfied</label>
+                    </div>                     
+          </div>
+
+           <div class="form-group">
+               <legend>2. How do you feel about the length of the sessions?</legend>
+                    <div class="radio">
+                         <input type="radio" name="length" id="length-too-long" value="strongly agree" class="length" />
+                         <label for="length-too-long">Too Long</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="length" id="length-just-right" value="just right" class="length" />
+                         <label for="length-just-right">Just Right</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="length" id="length-too-short" value="too short" class="length" />
+                         <label for="length-too-short">Too Short</label>
+                    </div>
+                   
+          </div>
+
+          <div class="form-group">
+               <legend>3. How well did the conference meet your expectations?</legend>
+                    <div class="radio">
+                         <input type="radio" name="expectations" id="expectations-exceeded" value="exceeded my expectations" class="expectations" />
+                         <label for="expectations-exceeded">Exceeded My Expectations</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="expectations" id="expectations-expected" value="was just what I expected" class="expectations" />
+                         <label for="expectations-expected">Was Just What I Expected</label>
+                    </div>
+                    <div class="radio">     
+                         <input type="radio" name="expectations" id="expectations-did-not-meet" value="did not meet my expectations" class="expectations" />
+                         <label for="expectations-did-not-meet">Did Not Meet My Expectations</label>
+                    </div>                    
+                   
+          </div>
+
+         <div class="form-group">
+               <legend>4. The content of the conference sessions was appropriate and informative.</legend>
+                    <div class="radio">
+                         <input type="radio" name="content" id="content-strongly-agree" value="strongly agree" class="content" />
+                         <label for="content-strongly-agree">Strongly Agree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="content" id="content-agree" value="agree" class="content" />
+                         <label for="content-agree">Agree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="content" id="content-disagree" value="disagree" class="content" />
+                         <label for="content-disagree">Disagree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="content" id="content-strongly-disagree" value="strongly-disagree" class="content" />
+                         <label for="content-strongly-disagree">Strongly Disagree</label>
+                    </div>
+          </div>
+
+         <div class="form-group">
+               <legend>5. The conference was well organized.</legend>
+                    <div class="radio">
+                         <input type="radio" name="conference" id="conference-strongly-agree" value="strongly agree" class="conference" />
+                         <label for="conference-strongly-agree">Strongly Agree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="conference" id="conference-agree" value="agree" class="conference" />
+                         <label for="conference-agree">Agree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="conference" id="conference-disagree" value="disagree" class="conference" />
+                         <label for="conference-disagree">Disagree</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="conference" id="conference-strongly-disagree" value="strongly-disagree" class="conference" />
+                         <label for="conference-strongly-disagree">Strongly Disagree</label>
+                    </div>
+          </div>
+
+          <div class="form-group">
+               <legend>6. Would you recommend the conference to others?</legend>
+                    <div class="radio">
+                         <input type="radio" name="recommend" id="recommend-yes" value="yes" class="recommend" />
+                         <label for="recommend-yes">Yes</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="recommend" id="recommend-no" value="no" class="recommend" />
+                         <label for="recommend-no">No</label>
+                    </div>
+          </div>
+
+          <div class="form-group">
+               <legend>7. Would you like us to contact you?</legend>
+                    <div class="radio">
+                         <input type="radio" name="contact" id="contact-yes" value="yes" class="contact" />
+                         <label for="contact-yes">Yes</label>
+                    </div>
+                    <div class="radio">
+                         <input type="radio" name="contact" id="contact-no" value="no" class="contact" />
+                         <label for="contact-no">No</label>
+                    </div>
+          </div>
+          <div class="form-group">
+          <legend>8. Any general comments or questions you can leave below:</legend>
+          <textarea class="form-control" id="comments" name="comments" class="comments" rows="3"></textarea>
+          </div>
+               <div class="row">
+               <div class="form-submit col-xs-12 ">
+               <button type="submit" name="submit" class="btn btn-default btn-lg active" type="submit" id="submit" value="Submit">Submit</button>
+              </div>
+              </div>
+
+          </form>
+     
+     </div>
+
+</div>
+<script>
+   $('form').submit(function() {
+
+          var errs = 0; 
+          if(!$("input.speakers:checked").val()) { errs++; }
+          if(!$("input.length:checked").val()) { errs++; }
+          if(!$("input.expectations:checked").val()) { errs++; }
+          if(!$("input.content:checked").val()) { errs++; }
+          if(!$("input.conference:checked").val()) { errs++; }
+          if(!$("input.recommend:checked").val()) { errs++; }
+          
+
+          if(errs > 0) {
+            alert("Please answer each question!");           
+           
+            
+          } else {
+           
+            var postData = $(this).serialize();            
+  
+            $.ajax({
+              type: 'POST',
+              data: postData,
+              url: 'http://lcapp.meetnavis.com/send_survey.php',
+              success: function(data){
+                //console.log(data);
+                alert('Thanks for your survey response!');
+                window.location.href = "index.html";
+              },
+              error: function(){
+                console.log(data);
+                alert('There was an error submitting the survey. Please check your Internet connection!');
+                history.back();
+              }
+            });
+            
+          }
+
+          //localStorage.clear();
+          return false;
+});
+
+</script>

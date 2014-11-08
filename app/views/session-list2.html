@@ -1,0 +1,40 @@
+<div ng-controller="AgendaDay2Ctrl">
+<div ng-include="navUrl"></div>  
+
+
+    <div class="content lclist cf">      
+        
+    
+      <h2>Agenda - {{day}}</h2>
+        <div class="error">{{errorMsg}}</div>
+        <div class="panel-group" id="accordion">
+         <div class="loading" ng-show="!sessions">
+              Loading ...
+         </div>
+          <div class="panel panel-default" ng-repeat="session in sessions">
+           
+            <div class="panel-heading cf" ng-cloak>
+              <a data-toggle="collapse" class="toggle" data-parent="#accordion" href=".collapse{{session.ID}}">
+              <h4 class="panel-title">        
+                 {{session.SessionStart}}      
+              </h4>
+              </a>
+              <span class="room">{{session.SessionRoom}}</span>
+              <span class="ical" ng-bind-html="trustHTML(session.SessionICal)"></span>
+            </div>
+            
+            <div id="collapse{{session.ID}}" class="collapse{{session.ID}} panel-collapse collapse in">
+              <div class="panel-body">
+                <p>{{session.SessionStart}} - {{session.SessionEnd}}</p>
+                <h3 style="color:#FFFFFF">{{session.SessionTitle}}</h3>
+                <p><a class="session-detail" href="#/agenda/{{session.Day}}/{{session.ID}}">Session Detail &amp; Survey</a></p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">    
+    //$('.panel-collapse').collapse();
+</script>

@@ -1,0 +1,204 @@
+// bower:scss
+// endbower
+
+@font-face {
+  font-family: 'latolight';
+  src: url('/fonts/lato-light-webfont.eot');
+  src: url('/fonts/lato-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/lato-light-webfont.woff2') format('woff2'),
+       url('/fonts/lato-light-webfont.woff') format('woff'),
+       url('/fonts/lato-light-webfont.ttf') format('truetype'),
+       url('/fonts/lato-light-webfont.svg#latolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'latolight';
+  color: #ffffff;
+  padding: 50px 0 0 0;
+   
+}
+
+.home {
+  background: url(/images/backgrounds/home_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.agenda {
+
+  background: url(/images/backgrounds/agenda_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+.navbar-default {
+border: none;
+border-color: none;
+
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
+border-color: none;
+background-color: none;
+background: none;
+}
+
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:focus {
+  float: left;
+  margin-left: 10px;
+  margin-top: 14px;
+  border: none;
+  border-color: none;
+  background: none;
+  background-color: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+background-color: none;
+border-color:none;
+}
+
+.navbar-default .navbar-toggle {
+border-color: none;
+padding-left: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #ffffff;
+}
+
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    /*right: auto;
+    background: none;*/
+    border: none;
+  }
+}
+
+.navbar {
+  min-height: 60px;
+}
+
+.navbar-default {
+  /*background: none;*/
+
+}
+
+.navmenu-default {
+  background-color: #304A56;
+  border-right: none;
+  
+}
+
+.slide-nav-icon {
+  width: 25px; 
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.slide-nav-icon div {
+  margin-top: 8px;
+  color: #ffffff;
+}
+
+.slide-icon-link {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.slide-icon-link div {
+  text-align:center;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.container  {
+  margin-top: 80px;
+}
+
+/* navbar colors */
+
+.navbar-home {
+  background: #CBE085; /* light green */
+}
+
+.navbar-agenda {
+  background: #51AA4D; /* dark green */
+}
+
+.agenda-hilite {
+   background: #74BB71;
+}
+
+
+/* Circular images */
+
+.circular-img {
+     
+  width: 100px;
+  height: 100px; 
+  display: block;
+  border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+
+.welcome-img {
+   
+  display: block;
+  border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  
+}
+
+.bio-img {
+  
+}
+
+.agenda-details-btn {
+  width: 135px;
+  height: auto;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+
