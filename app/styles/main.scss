@@ -25,6 +25,8 @@ body {
    
 }
 
+/* body background styles */
+
 .home {
   background: url(/images/backgrounds/home_background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -34,25 +36,30 @@ body {
 }
 
 .agenda {
-
   background: url(/images/backgrounds/agenda_background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  
+  background-size: cover;  
+}
+
+.speakers {
+  background: url(/images/backgrounds/speakers_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
 }
 
 .navbar-default {
-border: none;
-border-color: none;
-
+  border: none;
+  border-color: none;
 }
 
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
-border-color: none;
-background-color: none;
-background: none;
+  border-color: none;
+  background-color: none;
+  background: none;
 }
 
 .navbar-toggle, .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:focus {
@@ -66,19 +73,18 @@ background: none;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-background-color: none;
-border-color:none;
+  background-color: none;
+  border-color:none;
 }
 
 .navbar-default .navbar-toggle {
-border-color: none;
-padding-left: none;
+  border-color: none;
+  padding-left: none;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-background-color: #ffffff;
+  background-color: #ffffff;
 }
-
 
 @media (min-width: 0) {
   .navbar-toggle {
@@ -117,23 +123,44 @@ background-color: #ffffff;
   height: auto;
   margin-right: auto;
   margin-left: auto;
+  padding-bottom: 5px;
 }
 
-.slide-nav-icon div {
+.resort-nav-icon {
+  width: 30px; 
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 5px;
+}
+
+/*.slide-nav-icon div {
   margin-top: 8px;
   color: #ffffff;
 }
+*/
 
 .slide-icon-link {
-  text-align: center;
+  height: 48px;
+  display:block;
+  text-align: left;
   color: #fff;
   margin-top: 10px;
+  line-height: 24px;
 }
 
+/*
 .slide-icon-link div {
   text-align:center;
   color: #ffffff;
   margin-top: 10px;
+}
+*/
+
+.slide-icon-link span {
+  text-align:left;
+  color: #ffffff;    
+  padding-left: 15px;
 }
 
 .container  {
@@ -148,6 +175,10 @@ background-color: #ffffff;
 
 .navbar-agenda {
   background: #51AA4D; /* dark green */
+}
+
+.navbar-speakers {
+  background: #F7931E; /* orange */
 }
 
 .agenda-hilite {
@@ -183,15 +214,44 @@ background-color: #ffffff;
   
 }
 
+/* right navbar items */
+
+.agenda-buttons {
+  margin-right: none;
+  padding-right: none;
+  
+}
+
+.nav-logo {
+  padding-top: 5px;
+  padding-right: 15px;
+  float:right;
+}
+
 .agenda-details-btn {
   width: 135px;
   height: auto;
 }
 
+.agenda-day-button {
+  float: left;
+  display: block;
+  padding: 8px;
+  min-height: 60px;
+}
+
+.agenda-day-button div {
+  padding-top: 5px;
+}
+
+/*style="float:left;padding:8px;color:#ffffff;"*/
+
 /* centered columns styles */
+
 .row-centered {
     text-align:center;
 }
+
 .col-centered {
     display:inline-block;
     float:none;
@@ -201,4 +261,88 @@ background-color: #ffffff;
     margin-right:-4px;
 }
 
+.home-container {
+  margin-top: 40px;
+  padding-left: 45px;
+}
 
+.home-container h1 {
+  padding-top: none;
+  margin-top: 60px;
+  font-size: 38px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+li a.slide-icon-link:hover {
+  background: none;
+}
+
+.panel {
+margin-bottom: 20px;
+background: none;
+/*background-color: none !important;*/
+border: none !important;
+border-radius: none !important;
+-webkit-box-shadow: none;
+box-shadow: none;
+padding-right: 15px;
+}
+
+.panel a:link, .panel a:visited {
+  color: #ffffff;
+}
+
+.panel:nth-of-type(even) {
+
+   background-color:rgba(0,0,0,0.2);  
+}
+
+.panel-heading {
+    padding: 20px 15px;
+    border-bottom: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    text-transform: uppercase;
+}
+
+.panel-title { text-transform: uppercase; }
+
+.panel-default>.panel-heading {
+    color: #ffffff;
+    background: none;
+    background-color: none !important;
+    border-color: none !important;
+}
+
+.speaker-navis {
+  background: #EF4745;
+  border-radius: 50px; 
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px; 
+  border: 3px solid #EF4745;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  padding: 0 5px;
+
+}
+
+.speaker-guest {
+  background: #51AA4D;
+  border-radius: 50px; 
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px; 
+  border: 3px solid #51AA4D;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 16px;
+  text-align: center;
+  padding: 0 5px;
+
+}
+
+.bioImg {
+  text-align:center;
+}

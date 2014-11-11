@@ -1,49 +1,56 @@
-<script type="text/javascript" src="http://h2v.1daylater.com/h2v.js"></script>
-
-<div ng-controller="AttendeeCtrl">
+<!-- script type="text/javascript" src="http://h2v.1daylater.com/h2v.js"></script -->
+<div ng-controller="SpeakerCtrl">
 <div ng-include="navUrl"></div>  
 
 
-    <div class="content speakerlist cf">    
-      <div class="error">{{errorMsg}}</div>
-  
+    <div class="container content speakerlist cf">    
+      <!-- div class="error">{{errorMsg}}</div -->
+        <!-- get loading class referenced below -->
+         <div class="loading" ng-show="!speakers">
+              Loading ...
+         </div>
     
-      <h2>Speakers</h2>
-        <div class="error">{{errorMsg}}</div>
-        <!--div class="search"><span class="searchlabel">Name or organization to search for: </span><input type="text" ng-model="searchText" /></div-->
-        <div class="panel-group" id="accordion">
+      <h2 style="text-align:center;margin-top:0;padding-top: 0;">SPEAKERS</h2>
+        
+       
+        <div class="panel-group" id="accordion" aria-multiselectable="true" role="tablist">
           <div class="panel panel-default" ng-repeat="speaker in speakers">
-            <a data-toggle="collapse" class="toggle" data-parent="#accordion" href=".collapse{{speaker.ListOrder}}">
+            <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href=".collapse{{speaker.ListOrder}}" aria-controls="collapse{{speaker.ListOrder}}">
              <div class="panel-heading cf" ng-cloak>
               
-              <h4 class="panel-title">        
-                 {{speaker.FirstName}} {{speaker.LastName}}     
-              </h4>
-             
-           
-              <!--div class="vcard">
-                 <span class="fn">{{speaker.FirstName}} {{speaker.LastName}}</span>
-                 <span class="org">{{speaker.Organization}}</span>
-                 <span class="email">{{speaker.Email}}</span> 
-                 <a href="#" class="vcardlink" onclick="return H2V.download (this);"><img src="../images/icon_vcard.png" style="border:none;" alt="vcard download" /></a>
-                             
-              </div-->
+              <div class="panel-title row">        
+                 <div class="col-xs-10 speaker-name">{{speaker.FirstName}} {{speaker.LastName}}</div>
+                 <!-- div class="col-xs-2" -->
+                    <div ng-if="speaker.SpeakerCategory == 'NAVIS'">
+                        <div class="speaker-navis col-xs-2">{{speaker.SpeakerCategory}}</div>
+                    </div>
+                    <div ng-if="speaker.SpeakerCategory == 'Guest'">
+                        <div class="speaker-guest col-xs-2">{{speaker.SpeakerCategory}}</div>
+                    </div> 
+                 <!-- /div -->            
               
             </div>
              </a>
-            <div id="collapse{{speaker.ListOrder}}" class="collapse{{speaker.ListOrder}} panel-collapse collapse in">
+            <div id="collapse{{speaker.ListOrder}}" class="collapse{{speaker.ListOrder}} panel-collapse collapse" role="tabpanel">
               <div class="panel-body">
                 <div class="bioImg" ng-bind-html="trustHTML(speaker.BioImg)"></div>
                 <p class="speaker-title">{{speaker.Title}}, {{speaker.Organization}}</p>
                 <p class="speaker-bio" ng-bind-html="trustHTML(speaker.Bio)"></p>
-                <!--p class="attendee-email"><a href="mailto:{{speaker.Email}}">{{speaker.Email}}</a></p-->
                
               </div>
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">    
-    $('.panel-collapse').collapse();
+            </div> <!-- end collapsible panel -->
+          </div> <!-- end panel -->
+
+        </div> <!-- end panel-group -->
+    </div> <!-- end container -->
+</div> <!-- end controller -->
+<script type="text/javascript">
+//$('.panel-collapse').collapse();   
+
+/*$('.panel-heading a').on('click',function(e){
+    if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){
+        e.stopPropagation();
+    }
+});*/
+    //$('.panel-collapse').collapse();
 </script>
