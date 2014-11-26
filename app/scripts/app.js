@@ -2,13 +2,25 @@
 
 /* App Module */
 
-var lcApp = angular.module('lcApp', ['ngSanitize','ngRoute', 'lcServices', 'ngAnimate', 'lcControllers']).config(function($sceDelegateProvider) {
+var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngAnimate', 'lcControllers']).config(function($sceDelegateProvider) {
          $sceDelegateProvider.resourceUrlWhitelist([
             // Allow same origin resource loads.
             'self',
             // Allow loading from our assets domain.  Notice the difference between * and **.
-            'http://lcapp.meetnavis.com/**']);      
+            'http://lcapp.meetnavis.com/**']);  
+
 });
+
+lcApp.run(function ($rootScope) {
+    $('.navmenu').offcanvas({'toggle': false});
+    
+    $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
+        $('.navmenu').offcanvas('hide');   
+       // $window.location.reload();   
+        //$route.reload();
+
+    });
+}); 
 
 lcApp.config(['$routeProvider',
   function($routeProvider) {
@@ -16,55 +28,78 @@ lcApp.config(['$routeProvider',
       when('/', {
         templateUrl: 'views/main.html',
         controller: 'HomeCtrl'
+        //reloadOnSearch: false
       }).
-       when('/welcome', {
+       when('/welcome/', {
         templateUrl: 'views/welcome.html',
         controller: 'WelcomeCtrl'
       }).
-        when('/attendees', {
+        when('/attendees/', {
         templateUrl: 'views/attendee-list.html',
-        controller: 'AttendeeCtrl'
+        controller: 'AttendeeCtrl'        
       }).
-      when('/speakers', {
+      when('/speakers/', {
         templateUrl: 'views/speaker-list.html',
         controller: 'SpeakerCtrl'
+        //reloadOnSearch: false
       }).
-      when('/agenda', {
+      when('/agenda/', {
         templateUrl: 'views/agenda.html',
         controller: 'AgendaCtrl'
+        //reloadOnSearch: false
       }).
-      when('/agenda/day1', {
+      when('/agenda/day1/', {
         templateUrl: 'views/session-list.html',
-        controller: 'AgendaDay1Ctrl'        
+        controller: 'AgendaDay1Ctrl'
+        //reloadOnSearch: false        
       }).
-      when('/agenda/day2', {
+      when('/agenda/day2/', {
         templateUrl: 'views/session-list2.html',
         controller: 'AgendaDay2Ctrl'
+        //reloadOnSearch: false
       }).
-      when('/agenda/:Day/:ID', {
-        templateUrl: 'views/session-detail.html',
-        controller: 'AgendaDetailCtrl'
+      when('/agenda/day1/:ID', {
+        templateUrl: 'views/session-detail1.html',
+        controller: 'AgendaDetailCtrl1'
+        //reloadOnSearch: false
       }).
-      when('/survey', {
+      when('/agenda/day2/:ID', {
+        templateUrl: 'views/session-detail2.html',
+        controller: 'AgendaDetailCtrl2'
+        //reloadOnSearch: false
+      }).
+      when('/survey/', {
         templateUrl: 'views/survey.html',
         controller: 'SurveyCtrl'
+        //reloadOnSearch: false
       }).
-      when('/session-survey/:Day/:ID', {
+      when('/session-survey/:Day/:ID/', {
         templateUrl: 'views/session-survey.html',
         controller: 'SessionSurveyCtrl'
+        //reloadOnSearch: false
       }).
-       when('/location', {
+       when('/location/', {
         templateUrl: 'views/location.html',
         controller: 'LocationCtrl'
+        //reloadOnSearch: false
       }).
       otherwise({
         redirectTo: '/'
+
       });
   }]);
 
 lcApp.run(function ($rootScope, $location) {
 
     var history = [];
+
+    /*$('.navmenu').offcanvas({'toggle': false});
+    
+    $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
+        $('.navmenu').offcanvas('hide');   
+        $window.location.reload();   
+
+    });*/
 
     $rootScope.$on('$routeChangeSuccess', function() {
         history.push($location.$$path);

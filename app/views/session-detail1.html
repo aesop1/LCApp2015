@@ -1,8 +1,8 @@
-<div ng-controller="AgendaDetailCtrl">
+<div ng-controller="AgendaDetailCtrl1">
 <div ng-include="navUrl"></div>  
 
 
-    <div class="content cf">
+    <div class="container content cf">
        
         <div class="error">{{errorMsg}}</div>
          <div class="loading" ng-show="!sessiondetail">
@@ -15,7 +15,7 @@
         <div class="session-speaker" ng-bind-html="trustHTML(sessiondetail.SessionSpeaker2)"></div>
         <div class="session-speaker" ng-bind-html="trustHTML(sessiondetail.SessionSpeaker3)"></div>
         <p></p>
-        <p><a class="session-detail" href="#/session-survey/{{sessiondetail.Day}}/{{sessiondetail.ID}}">Give us Feedback on this Session</a></p>
+        <p><a class="session-detail" ng-href="#/session-survey/{{sessiondetail.Day}}/{{sessiondetail.ID}}">Give us Feedback on this Session</a></p>
 
      </div>
 </div>

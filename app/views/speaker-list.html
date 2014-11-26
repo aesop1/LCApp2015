@@ -13,7 +13,7 @@
       <h2 style="text-align:center;margin-top:0;padding-top: 0;">SPEAKERS</h2>
         
        
-        <div class="panel-group" id="accordion" aria-multiselectable="true" role="tablist">
+        <div class="panel-group" id="accordion" aria-multiselectable="false" role="tablist">
           <div class="panel panel-default" ng-repeat="speaker in speakers">
             <a data-toggle="collapse" class="collapsed" data-parent="#accordion" href=".collapse{{speaker.ListOrder}}" aria-controls="collapse{{speaker.ListOrder}}">
              <div class="panel-heading cf" ng-cloak>
@@ -27,7 +27,7 @@
                     <div ng-if="speaker.SpeakerCategory == 'Guest'">
                         <div class="speaker-guest col-xs-2">{{speaker.SpeakerCategory}}</div>
                     </div> 
-                 <!-- /div -->            
+                 </div>            
               
             </div>
              </a>
@@ -45,7 +45,7 @@
     </div> <!-- end container -->
 </div> <!-- end controller -->
 <script type="text/javascript">
-//$('.panel-collapse').collapse();   
+
 
 /*$('.panel-heading a').on('click',function(e){
     if($(this).parents('.panel').children('.panel-collapse').hasClass('in')){

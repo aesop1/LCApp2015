@@ -22,6 +22,7 @@ body {
   font-family: 'latolight';
   color: #ffffff;
   padding: 50px 0 0 0;
+  overflow: scroll;
    
 }
 
@@ -49,6 +50,26 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
+}
+
+.resort {
+
+  background: url(/images/backgrounds/resort_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  
+}
+
+.welcome {
+
+   background: url(/images/backgrounds/welcome_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+  
 }
 
 .navbar-default {
@@ -185,10 +206,20 @@ body {
    background: #74BB71;
 }
 
+.navbar-resort {
+  background: #5C8DAA; /* purplish */
+}
+
 
 /* Circular images */
 
 .circular-img {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.circular-img img {
      
   width: 100px;
   height: 100px; 
@@ -196,6 +227,8 @@ body {
   border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -345,4 +378,23 @@ padding-right: 15px;
 
 .bioImg {
   text-align:center;
+}
+
+
+/* survey */
+
+legend {
+  color: #ffffff;
+}
+
+.radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+  margin-left: 0;
+}
+
+.green {
+  background: #CBE085;
+}
+
+.green-text {
+  color: #CBE085;
 }
