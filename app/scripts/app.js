@@ -9,7 +9,11 @@ var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngA
             // Allow loading from our assets domain.  Notice the difference between * and **.
             'http://lcapp.meetnavis.com/**']);  
 
+          
+
 });
+
+
 
 lcApp.run(function ($rootScope) {
     $('.navmenu').offcanvas({'toggle': false});
@@ -20,6 +24,8 @@ lcApp.run(function ($rootScope) {
         //$route.reload();
 
     });
+
+   
 }); 
 
 lcApp.config(['$routeProvider',
@@ -89,6 +95,8 @@ lcApp.config(['$routeProvider',
       });
   }]);
 
+
+
 lcApp.run(function ($rootScope, $location) {
 
     var history = [];
@@ -101,19 +109,34 @@ lcApp.run(function ($rootScope, $location) {
 
     });*/
 
-    $rootScope.$on('$routeChangeSuccess', function() {
+    /*$rootScope.$on('$routeChangeSuccess', function() {
         history.push($location.$$path);
-    });
+    });*/
 
     $rootScope.back = function () {
         var prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";
         $location.path(prevUrl);
     };
 
+    /*$rootScope.getURL = function(thisUrl) {
+             if(thisUrl === '') {
+                thisUrl = '#/';
+             }
+             var random = Math.random();
+             return thisUrl + '?r=' + random;
+    }; */   
+
+   
+
 });
 
 //Filesystem code
 window.appRootDirName = "NAVIS";
+
+$rootScope.getRandom = function() {
+               var newrandom = Math.random();
+               return newrandom;
+};  
 
 function getDownload(downloadUrl, deviceFilePath) {
   if (navigator.userAgent.match(/(Android|BlackBerry)/)) {
