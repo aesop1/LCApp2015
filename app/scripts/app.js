@@ -11,13 +11,17 @@ var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngA
 
 });
 
+/*lcApp.run(['$location', '$rootElement', function ($location, $rootElement) {
+      $rootElement.off('click');
+}]);*/
+
 lcApp.run(function ($rootScope) {
     $('.navmenu').offcanvas({'toggle': false});
     
-    $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
+    $rootScope.$on('$routeChangeStart', function ($window, $location, event, next, current) {
         $('.navmenu').offcanvas('hide');   
-       // $window.location.reload();   
-        //$route.reload();
+        /*$location.reload();*/
+   
 
     });
 }); 
@@ -99,11 +103,11 @@ lcApp.run(function ($rootScope, $location) {
         $('.navmenu').offcanvas('hide');   
         $window.location.reload();   
 
-    });*/
+    });
 
     $rootScope.$on('$routeChangeSuccess', function() {
         history.push($location.$$path);
-    });
+    });*/
 
     $rootScope.back = function () {
         var prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";

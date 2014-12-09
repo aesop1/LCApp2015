@@ -15,7 +15,7 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -72,143 +72,7 @@ body {
   
 }
 
-.navbar-default {
-  border: none;
-  border-color: none;
-}
 
-.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
-  border-color: none;
-  background-color: none;
-  background: none;
-}
-
-.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:focus {
-  float: left;
-  margin-left: 10px;
-  margin-top: 14px;
-  border: none;
-  border-color: none;
-  background: none;
-  background-color: none;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: none;
-  border-color:none;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: none;
-  padding-left: none;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-
-@media (min-width: 0) {
-  .navbar-toggle {
-    display: block; /* force showing the toggle */
-  }
-}
-
-@media (min-width: 992px) {
-  body {
-    padding: 0;
-  }
-  .navbar {
-    /*right: auto;
-    background: none;*/
-    border: none;
-  }
-}
-
-.navbar {
-  min-height: 60px;
-}
-
-.navbar-default {
-  /*background: none;*/
-
-}
-
-.navmenu-default {
-  background-color: #304A56;
-  border-right: none;
-  
-}
-
-.slide-nav-icon {
-  width: 25px; 
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 5px;
-}
-
-.resort-nav-icon {
-  width: 30px; 
-  height: auto;
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 5px;
-}
-
-/*.slide-nav-icon div {
-  margin-top: 8px;
-  color: #ffffff;
-}
-*/
-
-.slide-icon-link {
-  height: 48px;
-  display:block;
-  text-align: left;
-  color: #fff;
-  margin-top: 10px;
-  line-height: 24px;
-}
-
-/*
-.slide-icon-link div {
-  text-align:center;
-  color: #ffffff;
-  margin-top: 10px;
-}
-*/
-
-.slide-icon-link span {
-  text-align:left;
-  color: #ffffff;    
-  padding-left: 15px;
-}
-
-.container  {
-  margin-top: 80px;
-}
-
-/* navbar colors */
-
-.navbar-home {
-  background: #CBE085; /* light green */
-}
-
-.navbar-agenda {
-  background: #51AA4D; /* dark green */
-}
-
-.navbar-speakers {
-  background: #F7931E; /* orange */
-}
-
-.agenda-hilite {
-   background: #74BB71;
-}
-
-.navbar-resort {
-  background: #5C8DAA; /* purplish */
-}
 
 
 /* Circular images */
@@ -398,3 +262,138 @@ legend {
 .green-text {
   color: #CBE085;
 }
+
+/****** CSS Menu Code ******/
+
+
+
+.navbar-default {
+  border: none;
+  border-color: none;
+}
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:focus {
+  border-color: none;
+  background-color: none;
+  background: none;
+}
+
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:visited, .navbar-toggle:focus {
+  float: left;
+  margin-left: 10px;
+  margin-top: 14px;
+  border: none;
+  border-color: none;
+  background: none;
+  background-color: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: none;
+  border-color:none;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: none;
+  padding-left: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    /*right: auto;
+    background: none;*/
+    border: none;
+  }
+}
+
+.navmenu {
+  margin-top: 60px;
+}
+.navbar {
+  min-height: 60px;
+}
+
+.navbar-default {
+  /*background: none;*/
+
+}
+
+.navmenu-default {
+  background-color: #304A56;
+  border-right: none;
+  
+}
+
+.slide-nav-icon {
+  width: 25px; 
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 5px;
+}
+
+.resort-nav-icon {
+  width: 30px; 
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 5px;
+}
+
+
+.slide-icon-link {
+  height: 48px;
+  display:block;
+  text-align: left;
+  color: #fff;
+  margin-top: 10px;
+  line-height: 24px;
+}
+
+
+.slide-icon-link span {
+  text-align:left;
+  color: #ffffff;    
+  padding-left: 15px;
+}
+
+.container  {
+  margin-top: 80px;
+}
+
+/* navbar colors */
+
+.navbar-home {
+  background: #CBE085; /* light green */
+}
+
+.navbar-agenda {
+  background: #51AA4D; /* dark green */
+}
+
+.navbar-speakers {
+  background: #F7931E; /* orange */
+}
+
+.agenda-hilite {
+   background: #74BB71;
+}
+
+.navbar-resort {
+  background: #5C8DAA; /* purplish */
+}
+
+
