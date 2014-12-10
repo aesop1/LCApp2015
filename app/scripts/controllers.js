@@ -43,6 +43,7 @@ lcControllers.controller('LocationCtrl', function($http, $scope, $rootScope, $ro
 
 lcControllers.controller('AttendeeCtrl', function($http, $scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
      $scope.navUrl = 'views/nav.html';
+     $rootScope.bodyClass = 'attendees';
      $scope.trustHTML = trustService.trustHTML;
      var dataUrl = 'http://lcapp.meetnavis.com/attendees.json';
      ajaxService.getData(dataUrl).then(function(d) {

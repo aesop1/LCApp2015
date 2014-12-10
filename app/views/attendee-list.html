@@ -1,13 +1,11 @@
-<script type="text/javascript" src="http://h2v.1daylater.com/h2v.js"></script>
-
 <div ng-controller="AttendeeCtrl">
 <div ng-include="navUrl"></div>  
 
 
-    <div class="content lclist cf">    
-      <h2>Attendees</h2>
+    <div class="container content lclist cf">    
+      <h2 style="text-align:center;">ATTENDEES</h2>
         <div class="error">{{errorMsg}}</div>
-        <div class="search"><span class="searchlabel">Name or organization to search for: </span><input type="text" ng-model="searchText" /></div>
+        <div class="search"><span class="searchlabel">Name or organization to search for: </span><input type="text" ng-model="searchText" /></div><br>
         <div class="panel-group" id="accordion">
          <div class="loading" ng-show="!attendees">
               Loading ...
@@ -21,13 +19,13 @@
               </h4>
               <!--/a-->
            
-              <div class="vcard">
+              <!-- div class="vcard">
                  <span class="fn">{{attendee.Name}}</span>
                  <span class="org">{{attendee.Organization}}</span>
                  <span class="email">{{attendee.Email}}</span> 
                  <a href="#" class="vcardlink" onclick="return H2V.download (this);"><img src="images/icon_vcard.png" style="border:none;" alt="vcard download" /></a>
                              
-              </div>
+              </div -->
               
             </div>
             

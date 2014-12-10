@@ -52,6 +52,14 @@ body {
   background-size: cover;  
 }
 
+.attendees {
+  background: url(/images/backgrounds/speakers_background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+
 .resort {
 
   background: url(/images/backgrounds/resort_background.jpg) no-repeat center center fixed; 
@@ -126,7 +134,7 @@ body {
 }
 
 .agenda-details-btn {
-  width: 135px;
+  width: 125px;
   height: auto;
 }
 
@@ -374,7 +382,7 @@ legend {
   margin-top: 80px;
 }
 
-/* navbar colors */
+/****** navbar colors ******/
 
 .navbar-home {
   background: #CBE085; /* light green */
@@ -396,4 +404,13 @@ legend {
   background: #5C8DAA; /* purplish */
 }
 
+/******* Attendees ******/
+.search {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+}
 
+.search input {
+  color: #000000;
+}
