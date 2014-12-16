@@ -16,3 +16,35 @@
 
         </div>
 </div>
+
+<div class="navbar navbar-default navbar-agenda-bottom navbar-fixed-bottom" role="navigation">
+  <div class="container-fluid">
+  <div class="navbar-header" style="text-align:center;">
+
+     <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="MenuOpen = !MenuOpen" class="filter-button"><div ng-show="MenuOpen"><img src="/images/icons/down-arrow.svg" alt="down-arrow" class="filter-arrow"><br>FILTER</div><div ng-show="!MenuOpen"><img src="/images/icons/up-arrow.svg" alt="up-arrow" class="filter-arrow"><br>FILTER</div></a>             
+     
+  </div>
+
+  <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+    
+  <div class="nav navbar-nav navbar-filter">
+   
+    <div class="row filter-row filter-row-top">
+          
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="all-cat radio-button ng-class:{'checked':isChecked == '1'}" ng-model="isChecked" ng-click="$parent.selection = '';isChecked = '1'" value="1"></span> <span class="label">All<br>Sessions</span></label></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="general-cat radio-button ng-class:{'checked':isChecked == '2'}" ng-model="isChecked" ng-click="$parent.selection = 'All';isChecked = '2'" value="2"></span> <span class="label">Keynotes /<br>General</span></label></div>
+     </div>
+     <div class="row filter-row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="res-rev-cat radio-button ng-class:{'checked':isChecked == '3'}" ng-model="isChecked" ng-click="$parent.selection = 'Res-Rev Managers';isChecked = '3'" value="3"></span> <span class="label">Rez-Rev<br>Managers</span></label></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="marketing-cat radio-button ng-class:{'checked':isChecked == '4'}" ng-model="isChecked" ng-click="$parent.selection = 'Marketing Managers';isChecked = '4'" value="4"></span> <span class="label">Marketing<br>Managers</span></label></div>
+     </div>
+     <div class="row filter-row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="hr-cat radio-button ng-class:{'checked':isChecked == '5'}" ng-model="isChecked" ng-click="$parent.selection = 'Human Resources';isChecked = '5'"></span> <span class="label">Human<br>Resources</span></label></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="owners-gms-cat radio-button ng-class:{'checked':isChecked == '6'}" ng-model="isChecked" ng-click="$parent.selection = 'Owners-GMs';isChecked = '6'" value="6"></span> <span class="label">Owners /<br>GMs</span></label></div>
+     </div>     
+    
+  </div>
+  </div><!-- close collapsible area -->
+
+ </div><!-- close container-fluid -->      
+</div><!-- close lower navbar -->

@@ -86,8 +86,14 @@ lcControllers.controller('AgendaDay1Ctrl', function($scope, $rootScope, $routePa
         $rootScope.bodyClass = 'agenda';
         $scope.day = "Day 1";        
         $scope.trustHTML = trustService.trustHTML;
-        var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day1.json';         
-        ajaxService.getData(dataUrl).then(function(d) {
+        
+        
+        $scope.selection = "";
+        $scope.isChecked = '1';
+
+        
+        var agendaUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day1.json';         
+        ajaxService.getData(agendaUrl).then(function(d) {
             if(!d) {               
                $scope.errorMsg = errorService.connError();
             } else {  
@@ -95,7 +101,18 @@ lcControllers.controller('AgendaDay1Ctrl', function($scope, $rootScope, $routePa
 
             }                   
            
-        });       
+        });
+
+        /*var categoryUrl = 'http://lcapp.meetnavis.com/agenda/categories.json';         
+        ajaxService.getData(categoryUrl).then(function(c) {
+            if(!c) {               
+               $scope.errorMsg2 = errorService.connError();
+            } else {  
+            $scope.categories = c;
+
+            }                   
+           
+        });   */           
            
 }); 
 
@@ -105,6 +122,10 @@ lcControllers.controller('AgendaDay2Ctrl', function($scope, $rootScope, $routePa
         $rootScope.bodyClass = 'agenda';
         $scope.day = "Day 2";        
         $scope.trustHTML = trustService.trustHTML;
+
+        $scope.selection = "";
+        $scope.isChecked = '1';
+
         var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day2.json';         
         ajaxService.getData(dataUrl).then(function(d) {
            if(!d) {               
@@ -119,7 +140,7 @@ lcControllers.controller('AgendaDay2Ctrl', function($scope, $rootScope, $routePa
 
 
 lcControllers.controller('AgendaDetailCtrl1', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-    $scope.navUrl = 'views/nav-agenda1.html';
+    $scope.navUrl = 'views/nav-agenda1-detail.html';
     $scope.trustHTML = trustService.trustHTML;
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day1/day1/' +  $routeParams.ID + '.json';    
     ajaxService.getData(dataUrl).then(function(d) {
@@ -134,7 +155,7 @@ lcControllers.controller('AgendaDetailCtrl1', function($scope, $rootScope, $rout
 
 
 lcControllers.controller('AgendaDetailCtrl2', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-    $scope.navUrl = 'views/nav-agenda2.html';
+    $scope.navUrl = 'views/nav-agenda2-detail.html';
     $scope.trustHTML = trustService.trustHTML;
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day2/day2/' +  $routeParams.ID + '.json';    
     ajaxService.getData(dataUrl).then(function(d) {
@@ -159,6 +180,7 @@ lcControllers.controller('SurveyCtrl', function($scope, $rootScope, $routeParams
 lcControllers.controller('SessionSurveyCtrl', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
     $scope.navUrl = 'views/nav.html';
     $scope.trustHTML = trustService.trustHTML;
+    
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-' + $routeParams.Day + '/' + $routeParams.Day + '/' +  $routeParams.ID + '.json';
     $scope.sessionDay = $routeParams.Day;
     $scope.sessionID = $routeParams.ID;

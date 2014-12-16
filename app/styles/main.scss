@@ -26,7 +26,7 @@ body {
    
 }
 
-/* body background styles */
+/******* body background styles *******/
 
 .home {
   background: url(/images/backgrounds/home_background.jpg) no-repeat center center fixed; 
@@ -72,7 +72,7 @@ body {
 
 .welcome {
 
-   background: url(/images/backgrounds/welcome_background.jpg) no-repeat center center fixed; 
+  background: url(/images/backgrounds/welcome_background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -81,9 +81,7 @@ body {
 }
 
 
-
-
-/* Circular images */
+/******* Circular images ********/
 
 .circular-img {
   margin-left: auto;
@@ -108,8 +106,8 @@ body {
    
   display: block;
   border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   width: 100px;
   height: 100px;
   
@@ -119,51 +117,19 @@ body {
   
 }
 
-/* right navbar items */
-
-.agenda-buttons {
-  margin-right: none;
-  padding-right: none;
-  
-}
-
-.nav-logo {
-  padding-top: 5px;
-  padding-right: 15px;
-  float:right;
-}
-
-.agenda-details-btn {
-  width: 125px;
-  height: auto;
-}
-
-.agenda-day-button {
-  float: left;
-  display: block;
-  padding: 8px;
-  min-height: 60px;
-}
-
-.agenda-day-button div {
-  padding-top: 5px;
-}
-
-/*style="float:left;padding:8px;color:#ffffff;"*/
-
-/* centered columns styles */
+/******* centered columns styles *******/
 
 .row-centered {
-    text-align:center;
+  text-align:center;
 }
 
 .col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+  display:inline-block;
+  float:none;
+  /* reset the text-align */
+  text-align:left;
+  /* inline-block space fix */
+  margin-right:-4px;
 }
 
 .home-container {
@@ -184,14 +150,13 @@ li a.slide-icon-link:hover {
 }
 
 .panel {
-margin-bottom: 20px;
-background: none;
-/*background-color: none !important;*/
-border: none !important;
-border-radius: none !important;
--webkit-box-shadow: none;
-box-shadow: none;
-padding-right: 15px;
+  margin-bottom: 20px;
+  background: none;
+  border: none !important;
+  border-radius: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-right: 15px;
 }
 
 .panel a:link, .panel a:visited {
@@ -231,7 +196,6 @@ padding-right: 15px;
   line-height: 16px;
   text-align: center;
   padding: 0 5px;
-
 }
 
 .speaker-guest {
@@ -245,15 +209,17 @@ padding-right: 15px;
   line-height: 16px;
   text-align: center;
   padding: 0 5px;
-
 }
 
 .bioImg {
   text-align:center;
 }
 
+/******* survey *******/
 
-/* survey */
+.survey {
+  padding: 0 20px 0 20px;
+}
 
 legend {
   color: #ffffff;
@@ -272,8 +238,6 @@ legend {
 }
 
 /****** CSS Menu Code ******/
-
-
 
 .navbar-default {
   border: none;
@@ -311,9 +275,83 @@ legend {
 }
 
 @media (min-width: 0) {
-  .navbar-toggle {
+  .navbar-toggle, .bottom-toggle {
     display: block; /* force showing the toggle */
   }
+
+  .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+   /* .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    } */
+    .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+
+    .navbar-collapse {
+      border-top: none;
+    }
+    .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+      display:block !important;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form, .collapse {
+      border-color: none;
+      border:0;
+  }
+}
+
+.navbar-collapse {
+  border-top: 1px solid transparent;
+  box-shadow: none;
+}
+
+.navbar-agenda-bottom label {
+   line-height: 16px;
+   vertical-align: middle;
+}
+
+.nav, .navbar-nav {
+  border: none;
+}
+
+.category-circle {
+  float: left;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;   
+}
+
+
+.label {
+  display: inline-block;
+  font-size: 12px;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -334,15 +372,9 @@ legend {
   min-height: 60px;
 }
 
-.navbar-default {
-  /*background: none;*/
-
-}
-
 .navmenu-default {
   background-color: #304A56;
-  border-right: none;
-  
+  border-right: none;  
 }
 
 .slide-nav-icon {
@@ -361,7 +393,6 @@ legend {
   padding-bottom: 5px;
 }
 
-
 .slide-icon-link {
   height: 48px;
   display:block;
@@ -370,7 +401,6 @@ legend {
   margin-top: 10px;
   line-height: 24px;
 }
-
 
 .slide-icon-link span {
   text-align:left;
@@ -392,6 +422,10 @@ legend {
   background: #51AA4D; /* dark green */
 }
 
+.navbar-agenda-bottom {
+  background: #2F4957; /* teal */
+}
+
 .navbar-speakers {
   background: #F7931E; /* orange */
 }
@@ -404,7 +438,38 @@ legend {
   background: #5C8DAA; /* purplish */
 }
 
+/******* right navbar items ******/
+
+.agenda-buttons {
+  margin-right: none;
+  padding-right: none;  
+}
+
+.nav-logo {
+  padding-top: 5px;
+  padding-right: 15px;
+  float:right;
+}
+
+.agenda-details-btn {
+  width: 125px;
+  height: auto;
+}
+
+.agenda-day-button {
+  float: left;
+  display: block;
+  padding: 8px;
+  min-height: 60px;
+}
+
+.agenda-day-button div {
+  padding-top: 5px;
+}
+
+
 /******* Attendees ******/
+
 .search {
   margin-left:auto;
   margin-right:auto;
@@ -414,3 +479,92 @@ legend {
 .search input {
   color: #000000;
 }
+
+/****** Filter Menu ******/
+
+.navbar-filter {
+  text-align:center;
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.filter-button, .filter-button:visited, .filter-button:hover {
+  display:block;
+  background:none;
+  border:none;
+  margin-top:5px;
+  width:75px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  color:#ffffff;
+  cursor:pointer;
+}
+
+.filter-arrow {
+  width: 50px;
+  height: auto;
+}
+
+.filter-row {
+  line-height: 14px;
+  margin-top: 10px;
+  margin-bottom:5px;
+  margin-left:auto;
+  margin-right:auto;
+  border-top:1px solid #ffffff;
+  text-align:left;
+  padding: 20px 0 10px 0;
+}
+
+.filter-row-top {
+  border: none;
+}
+
+.radio-button {    
+  display: inline-block;
+  border-radius: 50%;
+  width:20px;
+  height:20px;
+  background: #ffffff;
+  cursor:pointer;  
+  vertical-align: top;
+  line-height: 20px;
+}
+
+.label {
+  line-height: 20px;
+  display: inline-block;
+}
+
+.checked {  
+  border: 3px solid #000;  
+}
+
+
+/****** Category Colors ******/
+
+.all-cat {
+  background: #ffffff;
+}
+
+.general-cat {
+  background: #F7921E;
+}
+
+.res-rev-cat {
+  background: #51AA4E;
+}
+
+.owners-gms-cat {
+  background: #ED4645;
+}
+
+.marketing-cat {
+  background: #5C8DAB;
+}
+
+.hr-cat {
+  background: #CCE388;
+}
+
