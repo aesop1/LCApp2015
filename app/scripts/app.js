@@ -14,10 +14,7 @@ var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngA
 });
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cssmenu
 lcApp.run(function ($rootScope) {
     $('.navmenu').offcanvas({'toggle': false});
     
@@ -28,9 +25,7 @@ lcApp.run(function ($rootScope) {
 
     });
 
-<<<<<<< HEAD
-   
-=======
+
     $rootScope.catColor = function(colorParam) {
              if (colorParam == 'All') {
                 return '#F7921E';
@@ -46,7 +41,7 @@ lcApp.run(function ($rootScope) {
                 return '#FFFFFF'; //General
              }
     };
->>>>>>> cssmenu
+
 }); 
 
 lcApp.config(['$routeProvider',
@@ -123,18 +118,7 @@ lcApp.run(function ($rootScope, $location) {
     var history = [];
 
     
-<<<<<<< HEAD
-    $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
-        $('.navmenu').offcanvas('hide');   
-        $window.location.reload();   
 
-    });*/
-
-    /*$rootScope.$on('$routeChangeSuccess', function() {
-        history.push($location.$$path);
-    });*/
-=======
->>>>>>> cssmenu
 
     $rootScope.back = function () {
         var prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";
