@@ -1,4 +1,4 @@
-  
+
 
 var lcControllers = angular.module('lcControllers', []);
 
@@ -43,12 +43,8 @@ lcControllers.controller('LocationCtrl', function($http, $scope, $rootScope, $ro
 
 
 lcControllers.controller('AttendeeCtrl', function($http, $scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-<<<<<<< HEAD
-     $scope.navUrl = 'views/nav.html?r=' + random;
-=======
      $scope.navUrl = 'views/nav.html';
      $rootScope.bodyClass = 'attendees';
->>>>>>> cssmenu
      $scope.trustHTML = trustService.trustHTML;
      var dataUrl = 'http://lcapp.meetnavis.com/attendees.json';
      ajaxService.getData(dataUrl).then(function(d) {
@@ -145,11 +141,7 @@ lcControllers.controller('AgendaDay2Ctrl', function($scope, $rootScope, $routePa
 
 
 lcControllers.controller('AgendaDetailCtrl1', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-<<<<<<< HEAD
-    $scope.navUrl = 'views/nav-agenda1.html?r=' + random;
-=======
     $scope.navUrl = 'views/nav-agenda1-detail.html';
->>>>>>> cssmenu
     $scope.trustHTML = trustService.trustHTML;
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day1/day1/' +  $routeParams.ID + '.json';    
     ajaxService.getData(dataUrl).then(function(d) {
@@ -164,11 +156,7 @@ lcControllers.controller('AgendaDetailCtrl1', function($scope, $rootScope, $rout
 
 
 lcControllers.controller('AgendaDetailCtrl2', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-<<<<<<< HEAD
-    $scope.navUrl = 'views/nav-agenda2.html?r=' + random;
-=======
     $scope.navUrl = 'views/nav-agenda2-detail.html';
->>>>>>> cssmenu
     $scope.trustHTML = trustService.trustHTML;
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-day2/day2/' +  $routeParams.ID + '.json';    
     ajaxService.getData(dataUrl).then(function(d) {
