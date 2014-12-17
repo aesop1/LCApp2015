@@ -320,8 +320,13 @@ module.exports = function (grunt) {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-            '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
+            '{,*/}*.php',
+            'fonts/*.*',
+            'css/*.css',
+            'scripts/*.js',
+            'js/*.js',
+            '*.{ico,png,svg,jpg,txt}',
+            'images/{,*/}*.*',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
@@ -341,20 +346,20 @@ module.exports = function (grunt) {
 
     // Generates a custom Modernizr build that includes only the tests you
     // reference in your app
-    modernizr: {
-      dist: {
-        devFile: 'bower_components/modernizr/modernizr.js',
-        outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
-        files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '!<%= config.dist %>/scripts/vendor/*'
-          ]
-        },
-        uglify: true
-      }
-    },
+   // modernizr: {
+   //   dist: {
+   //     devFile: 'bower_components/modernizr/modernizr.js',
+   //     outputFile: '<%= config.dist %>/scripts/vendor/modernizr.js',
+   //     files: {
+   //       src: [
+   //         '<%= config.dist %>/scripts/{,*/}*.js',
+   //         '<%= config.dist %>/styles/{,*/}*.css',
+   //         '!<%= config.dist %>/scripts/vendor/*'
+   //       ]
+   //     },
+   //     uglify: true
+   //   }
+   // },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
@@ -423,7 +428,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
+    //'modernizr',
     'rev',
     'usemin',
     'htmlmin'

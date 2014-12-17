@@ -14,18 +14,39 @@ var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngA
 });
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cssmenu
 lcApp.run(function ($rootScope) {
     $('.navmenu').offcanvas({'toggle': false});
     
-    $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
+    $rootScope.$on('$routeChangeStart', function ($window, $location, event, next, current) {
         $('.navmenu').offcanvas('hide');   
-       // $window.location.reload();   
-        //$route.reload();
+        /*$location.reload();*/
+   
 
     });
 
+<<<<<<< HEAD
    
+=======
+    $rootScope.catColor = function(colorParam) {
+             if (colorParam == 'All') {
+                return '#F7921E';
+             } else if (colorParam == 'Res-Rev Managers') {
+                return '#51AA4E;';
+             } else if (colorParam == 'Owners-GMs') {
+                return '#ED4645';
+             } else if (colorParam == 'Marketing Managers') {
+                return '#5C8DAB';
+             } else if (colorParam == 'Human Resources') {
+                return '#C9DD7E';
+             } else {
+                return '#FFFFFF'; //General
+             }
+    };
+>>>>>>> cssmenu
 }); 
 
 lcApp.config(['$routeProvider',
@@ -101,8 +122,8 @@ lcApp.run(function ($rootScope, $location) {
 
     var history = [];
 
-    /*$('.navmenu').offcanvas({'toggle': false});
     
+<<<<<<< HEAD
     $rootScope.$on('$routeChangeStart', function ($window, event, next, current) {
         $('.navmenu').offcanvas('hide');   
         $window.location.reload();   
@@ -112,6 +133,8 @@ lcApp.run(function ($rootScope, $location) {
     /*$rootScope.$on('$routeChangeSuccess', function() {
         history.push($location.$$path);
     });*/
+=======
+>>>>>>> cssmenu
 
     $rootScope.back = function () {
         var prevUrl = history.length > 1 ? history.splice(-2)[0] : "/";

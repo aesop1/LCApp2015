@@ -1,0 +1,39 @@
+Hi Matt,
+
+Here are the changes we spoke about this morning.
+
+
+HOME
+• Try to center the word “Conference” all other icons and words are then justified right using the C in conference as the left side guide. See original design.
+• No apostrophe in the word “Leaders"
+• I will supply a new background image
+• Navis logo smaller
+
+WELCOME
+• Create a style that has title (all caps) and job title to match the Welcome PSD design - this will be used for all speakers bios
+• Roughly 70px right and left margin - this will be used for all speakers bios
+
+SPEAKERS
+• Jay will supply new headshot in square format to be rendered in a circle using CSS.
+• Same style for name and title as Welcome page (this won't work: the name appears aligned left in the unexpanded area and must appear in the same place. I can provide the circled headshot once the photos are available).
+
+AGENDA
+• Lets try to add a left margin of about 15px. I’m not exact on this but I think it needs more space (On an iPod Touch the right hand side of the button is cut off. Let's test this on devices first)
+• Jay will supply the art for the new filter in the footer
+• Jay will design color circles that represent the different session tracks.
+• Jay will design the session detail page
+
+SURVEY
+• Please add a left and right margin of about 70px. This margin width should match what ever we come up with for the Welcome and Speakers bio pages.
+
+RESORT
+• Please add a left and right margin of about 70px. This margin width should match what ever we come up with for the Welcome and Speakers bio pages.
+• Jay will supply a new map if you need for the smaller width page
+
+
+Thanks
+
+Jay Papke
+Creative Director
+
+

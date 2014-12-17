@@ -1,7 +1,7 @@
 var lcServices = angular.module('lcServices', []);
 
 	lcServices.factory('ajaxService', function($http, $q, errorService) {
-
+      
 	  var ajaxService = {
     	getData: function(dataUrl) {
           var promise = $http.get(dataUrl, {cache: true}).then(function (response) { 
