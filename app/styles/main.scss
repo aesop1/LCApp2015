@@ -157,6 +157,8 @@ li a.slide-icon-link:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
   padding-right: 15px;
+  padding-left: 15px;
+  padding: none;
 }
 
 .panel a:link, .panel a:visited {
@@ -169,7 +171,7 @@ li a.slide-icon-link:hover {
 }
 
 .panel-heading {
-    padding: 20px 15px;
+    padding: 20px 15px 20px 15px;
     border-bottom: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -238,6 +240,12 @@ legend {
 }
 
 /****** CSS Menu Code ******/
+
+.nav-logo img {
+  width: 90px;
+  height:auto;
+  padding-top:5px;
+}
 
 .navbar-default {
   border: none;

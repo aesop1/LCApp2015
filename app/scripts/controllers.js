@@ -6,7 +6,7 @@ var random = Math.random();
 
 lcControllers.controller('HomeCtrl', function($http, $scope, $rootScope, $sce, $routeParams) {
      $rootScope.bodyClass = 'home';
-     $scope.navUrl = 'views/nav.html?r=' + random;
+     $scope.navUrl = 'views/nav-home.html';
      
 }); 
 
