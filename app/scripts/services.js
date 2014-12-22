@@ -1,3 +1,6 @@
+'use strict';
+
+
 var lcServices = angular.module('lcServices', []);
 
 	lcServices.factory('ajaxService', function($http, $q, errorService) {

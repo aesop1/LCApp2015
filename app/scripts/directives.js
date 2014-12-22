@@ -1,3 +1,4 @@
+'use strict';
 
 
 lcApp.directive('connError', function() {

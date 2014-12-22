@@ -1,3 +1,4 @@
+'use strict';
 
 
 var lcControllers = angular.module('lcControllers', []);
