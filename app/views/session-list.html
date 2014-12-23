@@ -17,7 +17,7 @@
           </div>
 
       
-          <div class="row" ng-repeat="session in filteredSessions = (sessions | filter:{SessionCategory:selection})">
+          <div class="row" ng-repeat="session in filteredSessions = (sessions | filter:{CategoryLabel:selection})">
               
             
             <div class="col-xs-12">
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-xs-5">
-                    <div style="font-size: 11px;margin-top:10px;line-height:20px;"><div class="category-circle" style="background:{{catColor(session.SessionCategory)}};"></div>{{session.SessionCategory}}</div><br>
+                    <div style="font-size: 11px;margin-top:10px;line-height:20px;"><div class="category-circle" style="background:{{session.CategoryColor}};"></div>{{session.CategoryLabel}}</div><br>
                 </div>
 
               </div><!-- end first data row -->
