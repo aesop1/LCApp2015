@@ -35,18 +35,15 @@ header("Access-Control-Allow-Origin: *");
 
 function died($error) {
         // your error code can go here
-        echo "We are very sorry, but you are required to answer every question. ";
+        echo "We are very sorry, but you are required to answer the first three questions. ";
         echo $error."<br /><br />";
         echo "Please go back and fix these errors.<br /><br />";
         die();
 }
 
+
  // validation expected data exists
-if(!isset($_POST['informative']) ||
-        !isset($_POST['knowledge']) ||
-        !isset($_POST['engaging']) ||
-        !isset($_POST['length']) ||
-        !isset($_POST['rate'])) {
+if(!isset($_POST['speakers']) || !isset($_POST['length']) || !isset($_POST['appropriate'])) {
         died('');       
 } else {     
     
@@ -54,21 +51,43 @@ if(!isset($_POST['informative']) ||
     $email_from = "navismarketing@gmail.com";
     $email_subject = "Leaders Conference Survey";  
      
-    $thissession = $_POST['session'];
-    $informative = $_POST['informative']; // required
-    $knowledge = $_POST['knowledge']; // required
-    $engaging = $_POST['engaging']; // required
+    $thissession = $_POST['session']; //hidden data
+
+    $speakers = $_POST['speakers']; // required
+    $speaker_comments = $_POST['speaker-comments']; //unrequired comment
+
     $length = $_POST['length']; // required
-    $rate = $_POST['rate']; // required     
+    $length_comments = $_POST['length-comments']; //unrequired comment
+
+    $appropriate = $_POST['appropriate']; // required
+    $appropriate_comments = $_POST['appropriate-comments']; //unrequired comment
+
+    // constructive criticism
+
+    $likemost = $_POST['like-most-comments'];    //unrequired comment
+    $likeleast = $_POST['like-least-comments'];    //unrequired comment
+    $more = $_POST['more'];    //unrequired comment
+    $feedback_comments = $_POST['feedback-comments'];    //unrequired comment
+
     
     $email_message = "Survey details are below.\n\n";
      
     $email_message .= "The session was: ".$thissession."\r\n";
-    $email_message .= "1. The content of this session was informative: ".$informative."\r\n";
-    $email_message .= "2. The speaker clearly demonstrated knowledge of the topic: ".$knowledge."\r\n";
-    $email_message .= "3. The speaker was engaging: ".$engaging."\r\n";
-    $email_message .= "4. The length of the session was: ".$length."\r\n";
-    $email_message .= "5. Overall, how would you rate this session from 1 (low) to 5 (high)?: ".$rate."\r\n";     
+    $email_message .= "1. Overall, how satisfied were you with the speakers/presenters? ".$speakers."\r\n";
+    $email_message .= "- Comments: ".$speaker_comments."\r\n";
+
+    $email_message .= "2. How do you feel about the length of the sessions? ".$length."\r\n";
+    $email_message .= "- Comments: ".$length_comments."\r\n";
+
+    $email_message .= "3. The content of the conference sessions was appropriate and informative: ".$appropriate."\r\n";
+    $email_message .= "- Comments: ".$appropriate_comments."\r\n";
+
+    $email_message .= "Constructive Criticism:\n\n";
+
+    $email_message .= "1. What did you like most about this session? ".$likemost."\r\n";
+    $email_message .= "2. What did you like least about this session? In what ways could this session be improved?: ".$likeleast."\r\n";  
+    $email_message .= "3. Would you like to attend more sessions like this one? ".$more."\r\n";
+    $email_message .= "4. Any other feedback you have? ".$feedback_comments."\r\n";    
      
 // create email headers
     $headers = 'From: '.$email_from."\r\n".

@@ -71,7 +71,17 @@ lcControllers.controller('SpeakerCtrl', function($http, $scope, $rootScope, $rou
             $scope.speakers = d;
         }
                      
-     });         
+     });
+
+     var categoryUrl = 'http://lcapp.meetnavis.com/speakers/categories.json';
+     ajaxService.getData(dataUrl).then(function(c) {
+         if(!c) {               
+               $scope.errorMsg2 = errorService.connError();
+            } else {  
+            $scope.categories = c;
+        }
+                     
+     });                  
 
 }); 
 
