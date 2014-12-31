@@ -1,0 +1,13 @@
+<div ng-controller="LocationMeetingCtrl">
+<div ng-include="navUrl"></div>  
+
+    <div class="container content location cf">       
+        <div class="error">{{errorMsg}}</div>
+         <div class="loading" ng-show="!meetings">
+              Loading ...
+         </div>
+        <div ng-bind-html="trustHTML(meetings)" style="padding-left:25px;padding-right:25px;"></div>
+
+     </div>
+
+</div>

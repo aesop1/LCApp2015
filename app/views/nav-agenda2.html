@@ -7,11 +7,11 @@
         </button>
         <div class="agenda-buttons" style="float:right;text-align:center;">
             
-           <a href="/#/agenda/day1" target="_self" style="color:#ffffff;font-size:11px;" class="agenda-day-button" data-canvas="body">
-            <img src="/images/icons/agenda1-icon.svg" style="width: 25px;height: auto;color: #fff;" alt="Agenda Day 1"><br><div>Agenda D1</div>
+           <a href="#/agenda/day1" target="_self" style="color:#ffffff;font-size:11px;" class="agenda-day-button" data-canvas="body">
+            <img src="http://lcapp.meetnavis.com/assets/images/icons/agenda1-icon.svg" style="width: 25px;height: auto;color: #fff;" alt="Agenda Day 1"><br><div>Agenda D1</div>
            </a>
-           <a href="/#/agenda/day2" target="_self" style="color:#ffffff;font-size:11px;" class="agenda-day-button agenda-hilite" data-canvas="body">
-            <img src="/images/icons/agenda2-icon.svg" style="width: 25px;height: auto;color: #fff;" alt="Agenda Day 2"><br><div>Agenda D2</div>
+           <a href="#/agenda/day2" target="_self" style="color:#ffffff;font-size:11px;" class="agenda-day-button agenda-hilite" data-canvas="body">
+            <img src="http://lcapp.meetnavis.com/assets/images/icons/agenda2-icon.svg" style="width: 25px;height: auto;color: #fff;" alt="Agenda Day 2"><br><div>Agenda D2</div>
            </a>
 
         </div>
@@ -21,7 +21,7 @@
   <div class="container-fluid">
   <div class="navbar-header" style="text-align:center;">
 
-     <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="MenuOpen = !MenuOpen" class="filter-button"><div ng-show="MenuOpen"><img src="/images/icons/down-arrow.svg" alt="down-arrow" class="filter-arrow"><br>FILTER</div><div ng-show="!MenuOpen"><img src="/images/icons/up-arrow.svg" alt="up-arrow" class="filter-arrow"><br>FILTER</div></a>             
+     <a data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-click="MenuOpen = !MenuOpen" class="filter-button"><div ng-show="MenuOpen"><img src="http://lcapp.meetnavis.com/assets/images/icons/down-arrow.svg" alt="down-arrow" class="filter-arrow"><br>FILTER</div><div ng-show="!MenuOpen"><img src="http://lcapp.meetnavis.com/assets/images/icons/up-arrow.svg" alt="up-arrow" class="filter-arrow"><br>FILTER</div></a>             
      
   </div>
 
@@ -38,9 +38,7 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="res-rev-cat radio-button ng-class:{'checked':isChecked == '3'}" ng-model="isChecked" ng-click="$parent.selection = 'Resorts and Hotels';isChecked = '3'" value="3"></span> <span class="label">Resorts<br>and Hotels</span></label></div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="marketing-cat radio-button ng-class:{'checked':isChecked == '4'}" ng-model="isChecked" ng-click="$parent.selection = 'Vacation Rentals';isChecked = '4'" value="4"></span> <span class="label">Vacation<br>Rentals</span></label></div>
     </div>
-    <div class="row filter-row">
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><label class="label"><span class="hr-cat radio-button ng-class:{'checked':isChecked == '5'}" ng-model="isChecked" ng-click="$parent.selection = 'Vendor';isChecked = '5'"></span> <span class="label">Vendors<br></span></label></div>      
-    </div>     
+        
     
   </div><!-- close nav -->
   </div><!-- close collapsible area -->

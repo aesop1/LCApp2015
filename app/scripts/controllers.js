@@ -43,6 +43,22 @@ lcControllers.controller('LocationCtrl', function($http, $scope, $rootScope, $ro
 }); 
 
 
+lcControllers.controller('LocationMeetingCtrl', function($http, $scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
+     $scope.navUrl = 'views/nav-location.html';
+     $rootScope.bodyClass = 'resort';
+     $scope.trustHTML = trustService.trustHTML;
+     var dataUrl = 'http://lcapp.meetnavis.com/location/meeting-rooms';
+     ajaxService.getData(dataUrl).then(function(d) {
+           if(!d) {               
+               $scope.errorMsg = errorService.connError();
+            } else {  
+            $scope.meetings = d; 
+        }
+
+     });         
+}); 
+
+
 lcControllers.controller('AttendeeCtrl', function($http, $scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
      $scope.navUrl = 'views/nav.html';
      $rootScope.bodyClass = 'attendees';
@@ -97,7 +113,7 @@ lcControllers.controller('AgendaDay1Ctrl', function($scope, $rootScope, $routePa
         $scope.navUrl = 'views/nav-agenda1.html';
         $rootScope.bodyClass = 'agenda';
         $scope.day = "Day 1";        
-        $scope.trustHTML = trustService.trustHTML;        
+        $scope.trustHTML = trustService.trustHTML;   
         
         $scope.selection = "";
         $scope.isChecked = '1';
@@ -123,13 +139,12 @@ lcControllers.controller('AgendaDay1Ctrl', function($scope, $rootScope, $routePa
 
             }                   
            
-        });         
-           
+        });            
 }); 
 
 
 lcControllers.controller('AgendaDay2Ctrl', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-        $scope.navUrl = 'views/nav-agenda2.html?r=' + random;
+        $scope.navUrl = 'views/nav-agenda2.html';
         $rootScope.bodyClass = 'agenda';
         $scope.day = "Day 2";        
         $scope.trustHTML = trustService.trustHTML;
@@ -146,6 +161,18 @@ lcControllers.controller('AgendaDay2Ctrl', function($scope, $rootScope, $routePa
             }
            
         });  
+
+
+        var categoryUrl = 'http://lcapp.meetnavis.com/agenda/categories.json';         
+        ajaxService.getData(categoryUrl).then(function(c) {
+            if(!c) {               
+               $scope.errorMsg2 = errorService.connError();
+            } else {  
+            $scope.categories = c;
+
+            }                   
+           
+        });         
            
 }); 
 
@@ -180,16 +207,23 @@ lcControllers.controller('AgendaDetailCtrl2', function($scope, $rootScope, $rout
  });
 
 
-
-
 lcControllers.controller('SurveyCtrl', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-    $scope.navUrl = 'views/nav.html?r=' + random;
+    $scope.navUrl = 'views/nav.html';
+    $scope.trustHTML = trustService.trustHTML;
     $rootScope.bodyClass = 'home';
+    var dataUrl = 'http://lcapp.meetnavis.com/survey/';    
+    ajaxService.getData(dataUrl).then(function(d) {
+         if(!d) {               
+               $scope.errorMsg = errorService.connError();
+            } else {  
+           $scope.survey = d;
+          }
+    });
  });
 
 
 lcControllers.controller('SessionSurveyCtrl', function($scope, $rootScope, $routeParams, trustService, ajaxService, errorService) {
-    $scope.navUrl = 'views/nav.html?r=' + random;
+    $scope.navUrl = 'views/nav.html';
     $scope.trustHTML = trustService.trustHTML;
     
     var dataUrl = 'http://lcapp.meetnavis.com/agenda/agenda-' + $routeParams.Day + '/' + $routeParams.Day + '/' +  $routeParams.ID + '.json';

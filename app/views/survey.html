@@ -3,7 +3,9 @@
 
     <div class="container content survey cf">       
         <div class="error">{{errorMsg}}</div>
-       <div class="row">
+
+         <div ng-bind-html="trustHTML(survey)" style="padding-left:25px;padding-right:25px;"></div>
+       <!-- div class="row">
         <div class="col-xs-12" style="padding-left: 50px; padding-right:50px;">
         <h2 style="text-align:center;">FEEDBACK</h2>
         <p>Please leave any general feedback about the conference via the form below. </p>
@@ -141,11 +143,11 @@
 
           </form>
          </div>
-        </div>
-     </div>
+        </div -->
+     </div> <!-- close container -->
 
-</div>
-<script>
+</div> <!-- close cntrl -->
+<!-- script>
    $('form').submit(function() {
 
           var errs = 0; 
@@ -187,4 +189,4 @@
           return false;
 });
 
-</script>
+</script -->

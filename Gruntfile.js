@@ -321,6 +321,7 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '{,*/}*.php',
+            '{,*/}*.xml',
             'fonts/*.*',
             'css/*.css',
             'scripts/*.js',
@@ -429,7 +430,7 @@ module.exports = function (grunt) {
     'uglify',
     'copy:dist',
     //'modernizr',
-    'rev',
+    //'rev',
     'usemin',
     'htmlmin'
   ]);

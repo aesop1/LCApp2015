@@ -105,6 +105,11 @@ lcApp.config(['$routeProvider',
         controller: 'LocationCtrl'
         //reloadOnSearch: false
       }).
+        when('/location/meeting-rooms/', {
+        templateUrl: 'views/location-meetings.html',
+        controller: 'LocationMeetingCtrl'
+        //reloadOnSearch: false
+      }).
       otherwise({
         redirectTo: '/'
 
