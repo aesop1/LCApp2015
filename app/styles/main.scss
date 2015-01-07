@@ -25,6 +25,11 @@ body {
   overflow: scroll;   
 }
 
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
 /******* body background styles *******/
 
 .home {
@@ -123,8 +128,8 @@ body {
 }
 
 .home-container {
-  margin-top: 40px;
-  padding-left: 45px;
+  margin-top: 70px;
+  /*padding-left: 45px;*/
 }
 
 .home-container h1 {
@@ -187,18 +192,20 @@ li a.slide-icon-link:hover {
   font-size: 11px;
   line-height: 16px;
   text-align: center;
-  padding: 0 5px;
+  padding: 0 5px 0 5px;
 }
 
-.speaker-category {
+.speaker-category {  
   border-radius: 50px; 
   -moz-border-radius: 50px; 
   -webkit-border-radius: 50px; 
   color: #ffffff;
-  font-size: 11px;
+  font-size: 10px;
+  min-width: 65px;
+  max-width: 100px;
   line-height: 16px;
   text-align: center;
-  padding: 0 5px;
+  padding: 0 5px 0 5px;  
 }
 
 .speaker-guest {
@@ -218,7 +225,37 @@ li a.slide-icon-link:hover {
   text-align:center;
 }
 
-/******* survey *******/
+.bio-img {
+  display:block;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/******** Resort Page *********/
+
+.icon-link, .icon-link:hover, .icon-link:visited {
+  text-decoration: none;
+  float:left;
+  display:block;
+}
+
+.icon-link span {
+  color: #ffffff;
+}
+
+.resort-icon {
+  width: 38px;
+  display:block;
+  float: left;
+  margin-right: 5px;
+}
+
+h3.green-text {
+  font-size: 22px;
+}
+
+/******** Survey Styles ********/
 
 .survey {
   padding: 0 20px 0 20px;
@@ -409,11 +446,11 @@ z-index: 1028;
 }
 
 .slide-icon-link {
-  height: 48px;
+  height: 46px;
   display:block;
   text-align: left;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 2px;
   line-height: 24px;
 }
 
@@ -469,7 +506,7 @@ z-index: 1028;
 }
 
 .agenda-details-btn {
-  width: 125px;
+  width: 110px;
   height: auto;
 }
 
@@ -585,3 +622,14 @@ z-index: 1028;
   background: #5C8DAB;
 }
 
+.nav>li>a {
+position: relative;
+display: block;
+padding: none;
+}
+
+.nav .nav-home>li>a {
+position: relative;
+display: block;
+padding: 5px 15px;
+}

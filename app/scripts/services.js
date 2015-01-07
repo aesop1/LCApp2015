@@ -7,7 +7,7 @@ var lcServices = angular.module('lcServices', []);
       
 	  var ajaxService = {
     	getData: function(dataUrl) {
-          var promise = $http.get(dataUrl, {cache: true}).then(function (response) { 
+          var promise = $http.get(dataUrl, {cache: false}).then(function (response) { 
 
             return response.data;
             

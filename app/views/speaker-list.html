@@ -1,10 +1,9 @@
-<!-- script type="text/javascript" src="http://h2v.1daylater.com/h2v.js"></script -->
 <div ng-controller="SpeakerCtrl">
 <div ng-include="navUrl"></div>  
 
 
     <div class="container content speakerlist cf">    
-      <!-- div class="error">{{errorMsg}}</div -->
+      <div class="error">{{errorMsg}}</div>
         <!-- get loading class referenced below -->
          <div class="loading" ng-show="!speakers">
               Loading ...
@@ -19,13 +18,17 @@
              <div class="panel-heading cf" ng-cloak>
               
               <div class="panel-title row">        
-                 <div class="col-xs-10 speaker-name">
+                 <div class="col-xs-8 speaker-name">
                   {{speaker.FirstName}} {{speaker.LastName}}
                  </div>                
                  
-                 <div class="col-xs-2 speaker-category" style="background:{{speaker.CategoryColor}};border: 3px solid {{speaker.CategoryColor}};">
-                  {{speaker.CategoryLabel}}
-                 </div>                                       
+                 <div class="col-xs-4">
+                 
+                      <div class="speaker-category" style="background:{{speaker.CategoryColor}};border: 3px solid {{speaker.CategoryColor}};">
+                        {{speaker.CategoryLabel}}
+                      </div>
+                
+                </div>                                   
               
               </div><!-- close panel-title row -->
            </div><!-- close panel-heading -->

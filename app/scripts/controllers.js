@@ -5,9 +5,19 @@ var lcControllers = angular.module('lcControllers', []);
 
 var random = Math.random();
 
-lcControllers.controller('HomeCtrl', function($http, $scope, $rootScope, $sce, $routeParams) {
+lcControllers.controller('HomeCtrl', function($http, $scope, $rootScope, $sce, $routeParams, trustService, ajaxService, errorService) {
      $rootScope.bodyClass = 'home';
      $scope.navUrl = 'views/nav-home.html';
+     $scope.trustHTML = trustService.trustHTML;
+     var dataUrl = 'http://lcapp.meetnavis.com/';
+     ajaxService.getData(dataUrl).then(function(d) {
+         if(!d) {               
+               $scope.errorMsg = errorService.connError();
+            } else {  
+            $scope.home = d;           
+         }
+     });       
+
      
 }); 
 

@@ -7,9 +7,7 @@ var lcApp = angular.module('lcApp', ['ngSanitize', 'ngRoute', 'lcServices', 'ngA
             // Allow same origin resource loads.
             'self',
             // Allow loading from our assets domain.  Notice the difference between * and **.
-            'http://lcapp.meetnavis.com/**']);  
-
-          
+            'http://lcapp.meetnavis.com/**']);            
 
 });
 
@@ -130,15 +128,7 @@ lcApp.run(function ($rootScope, $location) {
         $location.path(prevUrl);
     };
 
-    /*$rootScope.getURL = function(thisUrl) {
-             if(thisUrl === '') {
-                thisUrl = '#/';
-             }
-             var random = Math.random();
-             return thisUrl + '?r=' + random;
-    }; */   
-
-   
+     
 
 });
 
